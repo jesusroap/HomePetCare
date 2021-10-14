@@ -1,0 +1,10 @@
+is_global = true
+build_property.TargetFramework = netcoreapp5.1
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.PublishSingleFile = 
+build_property.IncludeAllContentForSelfExtract = 
+build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
+build_property.RootNamespace = HomePetCare.App.Frontend
+build_property.ProjectDir = /Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Frontend/

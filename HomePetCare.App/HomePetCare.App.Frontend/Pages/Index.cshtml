@@ -1,0 +1,206 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+    <!-- ======== hero-section start ======== -->
+    <section id="home-section" class="hero-section">
+      <div class="container">
+        <div class="row align-items-center position-relative">
+          <div class="col-lg-6">
+            <div class="hero-content">
+              <h1 class="wow fadeInUp" data-wow-delay=".4s">
+                Conoce más sobre Home Pet Care
+              </h1>
+              <p class="wow fadeInUp" data-wow-delay=".6s">
+                ¿Tienes dudas sobre la salud de tu animal de compañía? comunícate con un médico veterinario por videollamada, desde cualquier parte del país y recibe asesoría.
+              </p>
+              <a
+                href="javascript:void(0)"
+                class="main-btn border-btn btn-hover wow fadeInUp"
+                data-wow-delay=".6s"
+                >Únete ahora</a
+              >
+              <a href="#servicios" class="scroll-bottom">
+                <i class="lni lni-arrow-down"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="hero-img wow fadeInUp" data-wow-delay=".5s">
+              <img src="~/img/hero/hero-img.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ======== hero-section end ======== -->
+
+    <!-- ======== feature-section start ======== -->
+    <section id="servicios" class="feature-section pt-120">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-4 col-md-8 col-sm-10">
+            <div class="single-feature">
+              <div class="icon">
+                <i class="lni lni-timer"></i>
+              </div>
+              <div class="content">
+                <h3>Asesoría 24 horas</h3>
+                <p>
+                  Asesoría veterinaria por videollamada en cualquier momento del día sin cita previa.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-8 col-sm-10">
+            <div class="single-feature">
+              <div class="icon">
+                <i class="lni lni-sthethoscope"></i>                
+              </div>
+              <div class="content">
+                <h3>Encuentra tu Veterinario</h3>
+                <p>
+                  Consulta el listado de médicos veterinarios en la app, elige el profesional con el cual quieres comunicarte y agenda tu cita.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-8 col-sm-10">
+            <div class="single-feature">
+              <div class="icon">
+                <i class="lni lni-capsule"></i>
+              </div>
+              <div class="content">
+                <h3>Medicina preventiva</h3>
+                <p>
+                  Contamos con excelentes programas de medicina preventiva como es la aplicación de vacunas para perros de los laboratorios más reconocidos.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ======== feature-section end ======== -->
+
+    <!-- ======== about-section start ======== -->
+    <section id="mascotas" class="about-section pt-150">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-xl-6 col-lg-6">
+            <div class="about-img">
+              <img src="~/img/about/about-1.png" alt="" class="w-100" />
+              <img
+                src="~/img/about/about-left-shape.svg"
+                alt=""
+                class="shape shape-1"
+              />
+              <img
+                src="~/img/about/left-dots.svg"
+                alt=""
+                class="shape shape-2"
+              />
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-6">
+            <div class="about-content">
+              <div class="section-title mb-30">
+                <h2 class="mb-25 wow fadeInUp" data-wow-delay=".2s">
+                  Mascotas
+                </h2>
+                <p class="wow fadeInUp" data-wow-delay=".4s">
+                  Los cuidadores de mascotas no están aquí para ganar dinero. Todo lo que piden es un lugar gratuito para quedarse, lo que significa que su único costo por el cuidado ilimitado de mascotas es una membresía anual, así de simple.
+                </p>
+              </div>
+              <a
+                asp-area="" asp-page="/hpc/Mascota"
+                class="main-btn btn-hover border-btn wow fadeInUp"
+                data-wow-delay=".6s"
+                >Descubrir más</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ======== about-section end ======== -->
+
+    <!-- ======== about2-section start ======== -->
+    <section id="veterinarios" class="about-section pt-150">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-xl-6 col-lg-6">
+            <div class="about-content">
+              <div class="section-title mb-30">
+                <h2 class="mb-25 wow fadeInUp" data-wow-delay=".2s">
+                  Veterinarios
+                </h2>
+                <p class="wow fadeInUp" data-wow-delay=".4s">
+                  Sabemos que puede parecer un acto de fe encontrar una niñera por primera vez. Es por eso que todas nuestras membresías Estándar y Premium le devuelven su dinero si no encuentra una niñera dentro de las dos semanas posteriores a la publicación de su primera sesión.
+                </p>
+              </div>
+              <a
+                asp-area="" asp-page="/hpc/Veterinario"
+                class="main-btn btn-hover border-btn wow fadeInUp"
+                data-wow-delay=".6s"
+                >Descubrir más</a>
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 order-first order-lg-last">
+            <div class="about-img-2">
+              <img src="~/img/about/about-2.png" alt="" class="w-100" />
+              <img
+                src="~/img/about/about-right-shape.svg"
+                alt=""
+                class="shape shape-1"
+              />
+              <img
+                src="~/img/about/right-dots.svg"
+                alt=""
+                class="shape shape-2"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ======== about2-section end ======== -->
+
+    <!-- ======== subscribe-section start ======== -->
+    <section id="contact" class="subscribe-section pt-120">
+      <div class="container">
+        <div class="subscribe-wrapper img-bg">
+          <div class="row align-items-center">
+            <div class="col-xl-6 col-lg-7">
+              <div class="section-title mb-15">
+                <h2 class="text-white mb-25">Suscríbete a nuestro boletín</h2>
+                <p class="text-white pr-5">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy eirmod tempor
+                </p>
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-5">
+              <form action="#" class="subscribe-form">
+                <input
+                  type="email"
+                  name="subs-email"
+                  id="subs-email"
+                  placeholder="Tu correo electrónico"
+                />
+                <button type="submit" class="main-btn btn-hover">
+                  Suscribir
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ======== subscribe-section end ======== -->
+
+    <script>
+      document.querySelector(".navbar-area").classList.add("home");
+      document.querySelector("#home").classList.add("active");
+    </script>

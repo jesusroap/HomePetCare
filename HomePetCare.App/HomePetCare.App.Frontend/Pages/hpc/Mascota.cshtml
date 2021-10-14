@@ -1,0 +1,100 @@
+﻿@page
+@model HomePetCare.App.Frontend.Pages.MascotaModel
+@{
+    ViewData["Title"] = "Mascotas";
+}
+
+
+<section id="lista-mascotas" class="section">
+    <div class="container">
+        <h1 class="wow fadeInUp intern" data-wow-delay=".4s">@ViewData["Title"]</h1>
+        
+        <div class="wow fadeInUp" data-wow-delay=".5s" style="text-align: center;">
+            <form method="get" style="float: right">
+                <div class="form-group">
+                    Mascota: <input type="text" name="filtroBusqueda" asp-for="FiltroBusqueda" />
+                    <input type="submit" value="Filtrar" />
+                </div>
+            </form>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Propietario</th>
+                        <th>Veterinario</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var mascota in Model.Mascotas)
+                    {
+                        <tr>
+                            <td>@mascota.Id</td>
+                            <td>@mascota.Nombre</td>
+                            <td>
+                                @try
+                                {
+                                    @mascota.Propietario.Nombre <b></b> @mascota.Propietario.Apellido;
+                                    <a asp-page="/assign/Owner" asp-route-idMascota="@mascota.Id" style="float: right"><i class="fas fa-user-edit"></i></a>
+                                }
+                                catch (Exception)
+                                {
+                                    <a asp-page="/assign/Owner" asp-route-idMascota="@mascota.Id"><i class="fas fa-user-plus"></i></a>
+                                }
+                            </td>
+                            <td>
+                                @try
+                                {
+                                    @mascota.Veterinario.Nombre <b></b> @mascota.Veterinario.Apellido;
+                                    <a asp-page="/assign/Vet" asp-route-idMascota="@mascota.Id" style="float: right"><i class="fas fa-user-edit"></i></a>
+                                }
+                                catch (Exception)
+                                {
+                                    <a asp-page="/assign/Vet" asp-route-idMascota="@mascota.Id"><i class="fas fa-user-plus"></i></a>
+                                }
+                            </td>
+                            <td>
+                                <a class="btn btn-success table-btn" asp-page="./Details" asp-route-idMascota="@mascota.Id">
+                                    <i class="fas fa-info-circle"></i>
+                                </a>
+                            </td>
+                            <td>
+                                @* @{
+                                    var p1 = mascota.Id.ParseString();
+                                    var p2 = mascota.Propietario.Id.ParseString();
+                                    var parms = new Dictionary<string, string>
+                                            {
+                                                { "idMascota", p1},
+                                                { "idPropietario", p2}
+                                            };
+                                } *@
+                                <a class="btn btn-warning table-btn" asp-page="./Edit"  asp-route-idMascota="@mascota.Id">
+                                    <i class="fas fa-user-edit" aria-hidden="true"></i>
+                                </a>
+                            </td>
+                            <td>
+                                <form method="get">
+                                    <input type="hidden" asp-for="@mascota.Id" name="idMascota"/>
+                                    <button type="submit" class="btn btn-danger table-btn" onclick="confirm('¿Esta seguro de eliminar este paciente?');"><i class="fas fa-trash-alt" aria-hidden="true"></i></button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+                
+            </table>
+
+            <a asp-page="./Edit" class="main-btn btn-hover border-btn intern">Adicionar Mascota</a>
+        </div>
+        
+    </div>
+</section>
+
+<script>
+    document.querySelector("#mascotas").classList.add("active");
+</script>

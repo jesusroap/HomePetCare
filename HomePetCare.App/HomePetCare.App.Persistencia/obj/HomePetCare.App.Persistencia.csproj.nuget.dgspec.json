@@ -1,0 +1,141 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Persistencia/HomePetCare.App.Persistencia.csproj": {}
+  },
+  "projects": {
+    "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Dominio/HomePetCare.App.Dominio.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Dominio/HomePetCare.App.Dominio.csproj",
+        "projectName": "HomePetCare.App.Dominio",
+        "projectPath": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Dominio/HomePetCare.App.Dominio.csproj",
+        "packagesPath": "/Users/mauricioroa/.nuget/packages/",
+        "outputPath": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Dominio/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/mauricioroa/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Persistencia/HomePetCare.App.Persistencia.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Persistencia/HomePetCare.App.Persistencia.csproj",
+        "projectName": "HomePetCare.App.Persistencia",
+        "projectPath": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Persistencia/HomePetCare.App.Persistencia.csproj",
+        "packagesPath": "/Users/mauricioroa/.nuget/packages/",
+        "outputPath": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Persistencia/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/mauricioroa/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Dominio/HomePetCare.App.Dominio.csproj": {
+                "projectPath": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Dominio/HomePetCare.App.Dominio.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

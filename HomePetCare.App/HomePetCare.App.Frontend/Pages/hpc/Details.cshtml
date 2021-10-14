@@ -1,0 +1,41 @@
+﻿@page
+@model HomePetCare.App.Frontend.Pages.DetailsModel
+@{
+    ViewData["Title"] = "Detalles de la Mascota";
+}
+
+<section id="details" class="section wow fadeInUp">
+    <div class="container">
+        <h1 class="intern">@Model.Mascota.Nombre</h1>
+
+        <div class="card" style="width: 50%; margin: auto;">
+            <img src="~/img/dogs/dog-1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">@Model.Mascota.Nombre</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Id:</strong> @Model.Mascota.Id</li>
+                <li class="list-group-item"><strong>Temperatura:</strong> @Model.Mascota.Temperatura</li>
+                <li class="list-group-item"><strong>Propietario:</strong>
+                    @try
+                    {
+                        @Model.Mascota.Propietario.Nombre <b></b> @Model.Mascota.Propietario.Apellido
+                    }
+                    catch (Exception)
+                    {
+                        <span>No asignado</span>
+                    }
+                </li>
+            </ul>
+        </div>
+        <div style="text-align: center">
+            <a asp-page="./Mascota" class="main-btn btn-hover border-btn intern">Volver</a>
+        </div>
+        
+    </div>
+</section>
+
+<script>
+    document.querySelector("#mascotas").classList.add("active");
+</script>
