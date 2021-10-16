@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "jZWJ2a81AleR+e1iK8j1vQ65s62e0I9iKhNzv79bFauJl5cQnB0Judq5tmqAaNoYwBMIV0o9HcEsViaKi2viuw==",
+  "dgSpecHash": "5nRdgdVIf7GOo6QTyXXHYwEEzW7hoahuxauNjUVIMl5KVSZyEHqYx1S846PpFiDPzH530ziTVL4s68ZIonPLMg==",
   "success": true,
   "projectFilePath": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Dominio/HomePetCare.App.Dominio.csproj",
   "expectedPackageFiles": [
     "/Users/mauricioroa/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "/Users/mauricioroa/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512"
+    "/Users/mauricioroa/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512",
+    "/Users/mauricioroa/.nuget/packages/system.componentmodel.annotations/5.0.0/system.componentmodel.annotations.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

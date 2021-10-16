@@ -70,9 +70,9 @@ namespace HomePetCare.App.Persistencia
 
         public IEnumerable<Mascota> GetMascotaPorFiltro(string filtro = null) // el parámetro es opcional 
         {
-            var mascotas = GetAllMascotas(); // Obtiene todos los saludos
+            var mascotas = GetAllMascotas(); // Obtiene todos las mascotas
 
-            if (mascotas != null)  //Si se tienen saludos
+            if (mascotas != null)  //Si se tienen mascotas
             {
                 if (!String.IsNullOrEmpty(filtro)) // Si el filtro tiene algun valor
                 {
