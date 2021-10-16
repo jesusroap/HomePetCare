@@ -174,3 +174,4 @@
 /Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Frontend/obj/Debug/net5.0/Razor/Areas/Identity/Pages/_ViewImports.cshtml.g.cs
 /Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Frontend/obj/Debug/net5.0/Razor/Pages/assign/Owner.cshtml.g.cs
 /Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Frontend/obj/Debug/net5.0/Razor/Pages/assign/Vet.cshtml.g.cs
+/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Frontend/obj/Debug/net5.0/Razor/Pages/hpc/claim.cshtml.g.cs

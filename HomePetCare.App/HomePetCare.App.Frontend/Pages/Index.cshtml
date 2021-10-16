@@ -3,7 +3,12 @@
 @{
     ViewData["Title"] = "Home page";
 }
-
+    <style>
+      main {
+        padding-top: 0;
+      }
+    </style>
+    <div class="banner"></div>
     <!-- ======== hero-section start ======== -->
     <section id="home-section" class="hero-section">
       <div class="container">
@@ -115,7 +120,6 @@
                 </p>
               </div>
               <a
-                asp-area="" asp-page="/hpc/Mascota"
                 class="main-btn btn-hover border-btn wow fadeInUp"
                 data-wow-delay=".6s"
                 >Descubrir más</a>
@@ -141,7 +145,6 @@
                 </p>
               </div>
               <a
-                asp-area="" asp-page="/hpc/Veterinario"
                 class="main-btn btn-hover border-btn wow fadeInUp"
                 data-wow-delay=".6s"
                 >Descubrir más</a>

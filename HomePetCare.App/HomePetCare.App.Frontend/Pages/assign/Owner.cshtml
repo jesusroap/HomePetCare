@@ -4,31 +4,33 @@
     ViewData["Title"] = "Asignación de Propietario";
 }
 
-<section id="edit" class="section">
-    <div class="container">
-        <h1 class="wow fadeInUp intern">@ViewData["Title"] para: @Model.mascota.Nombre</h1>
-        
-        <form method="post" class="wow fadeInUp">
-            <input type="hidden" asp-for="mascota.Id"/>     
-            <input type="hidden" asp-for="mascota.Nombre" value="@Model.mascota.Nombre"/>
-            <input type="hidden" asp-for="mascota.Temperatura" value="@Model.mascota.Temperatura"/>
+<section id="edit">
+    <h1 class="wow fadeInUp intern">@ViewData["Title"] para: @Model.mascota.Nombre</h1>
+    
+    <form method="post" class="wow fadeInUp">
+        <input type="hidden" asp-for="mascota.Id"/>     
+        <input type="hidden" asp-for="mascota.Nombre" value="@Model.mascota.Nombre"/>
+        <input type="hidden" asp-for="mascota.Temperatura" value="@Model.mascota.Temperatura"/>
+        <input type="hidden" asp-for="mascota.Peso" value="@Model.mascota.Peso"/>
+        <input type="hidden" asp-for="mascota.FrecuenciaRespiratoria" value="@Model.mascota.FrecuenciaRespiratoria"/>
+        <input type="hidden" asp-for="mascota.FrecuenciaCardiaca" value="@Model.mascota.FrecuenciaCardiaca"/>
+        <input type="hidden" asp-for="mascota.EstadoAnimo" value="@Model.mascota.EstadoAnimo"/>
 
-            <div class="form-group">
-                <label asp-for="mascota.Propietario"></label>
-                <select asp-for="mascota.Propietario.Id" name="propietarioId" class="form-control">
-                    <option value="0">- Seleccione -</option>
-                    @foreach (var propietarios in Model.propietarios)
-                    {
-                        <option value="@propietarios.Id">@propietarios.Nombre @propietarios.Apellido</option>                        
-                    }
-                </select>
-                <span class="text-danger" asp-validation-for="mascota.Propietario.Id"></span>
-            </div>
-            
-            <button type="submit" class="main-btn btn-hover border-btn intern">Grabar</button>
-            <a asp-page="/hpc/Mascota" class="main-btn btn-hover border-btn intern">Cancelar</a>
-        </form>
-    </div>
+        <div class="form-group">
+            <label asp-for="mascota.Propietario"></label>
+            <select asp-for="mascota.Propietario.Id" name="propietarioId" class="form-control">
+                <option value="0">- Seleccione -</option>
+                @foreach (var propietarios in Model.propietarios)
+                {
+                    <option value="@propietarios.Id">@propietarios.Nombre @propietarios.Apellido</option>                        
+                }
+            </select>
+            <span class="text-danger" asp-validation-for="mascota.Propietario.Id"></span>
+        </div>
+        
+        <button type="submit" class="main-btn btn-hover border-btn intern">Grabar</button>
+        <a asp-page="/hpc/Mascota" class="main-btn btn-hover border-btn intern">Cancelar</a>
+    </form>
 </section>
 
 <script>

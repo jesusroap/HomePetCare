@@ -4,27 +4,24 @@
     ViewData["Title"] = "Detalles del Propietario";
 }
 
-<section id="details" class="section wow fadeInUp">
-    <div class="container">
-        <h1 class="intern">@Model.Propietario.Nombre</h1>
+<section id="details" class="wow fadeInUp">
+    <h1 class="intern">@Model.Propietario.Nombre</h1>
 
-        <div class="card" style="width: 50%; margin: auto;">
-            <img src="~/img/owners/owner-1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">@Model.Propietario.Nombre @Model.Propietario.Apellido</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item"><strong>Id:</strong> @Model.Propietario.Id</li>
-                <li class="list-group-item"><strong>Identificación:</strong> @Model.Propietario.Identificacion</li>
-                <li class="list-group-item"><strong>Dirección:</strong> @Model.Propietario.Direccion</li>
-                <li class="list-group-item"><strong>Teléfono:</strong> @Model.Propietario.Telefono</li>
-            </ul>
+    <div class="card" style="width: 50%; margin: auto;">
+        <img src="~/img/owners/owner-1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">@Model.Propietario.Nombre @Model.Propietario.Apellido</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
         </div>
-        <div style="text-align: center">
-            <a asp-page="./Propietario" class="main-btn btn-hover border-btn intern">Volver</a>
-        </div>
-        
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><strong>Id:</strong> @Model.Propietario.Id</li>
+            <li class="list-group-item"><strong>Identificación:</strong> @Model.Propietario.Identificacion</li>
+            <li class="list-group-item"><strong>Dirección:</strong> @Model.Propietario.Direccion</li>
+            <li class="list-group-item"><strong>Teléfono:</strong> @Model.Propietario.Telefono</li>
+        </ul>
+    </div>
+    <div style="text-align: center">
+        <a asp-page="./Propietario" class="main-btn btn-hover border-btn intern">Volver</a>
     </div>
 </section>
 

@@ -15704,6 +15704,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Frontend/Pages/hpc/claim.cshtml",
+      "TargetPath": "Pages\\hpc\\claim.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Frontend/Pages/hpc/EditPropietario.cshtml",
       "TargetPath": "Pages\\hpc\\EditPropietario.cshtml",
       "FileKind": "mvc"

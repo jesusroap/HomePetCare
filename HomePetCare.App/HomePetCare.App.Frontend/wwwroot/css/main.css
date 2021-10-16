@@ -137,10 +137,6 @@ h1 {
   }
 }
 
-.section {
-  padding: 160px 0 50px;
-}
-
 .section-title span {
   font-size: 25px;
   color: #162447;
@@ -779,9 +775,6 @@ p {
   position: relative;
   z-index: 1;
   padding: 160px 0 50px;
-  background-image: url("../img/hero/hero-bg.svg");
-  background-position: top center;
-  background-repeat: no-repeat;
 }
 
 .hero-section.intern {
@@ -808,14 +801,8 @@ p {
   font-size: 60px;
   margin-bottom: 35px;
   color: #fff;
-}
-.section h1 {
-  color: rgb(88 100 255 / 30%);
-  padding: 1rem 4rem;
-  border: 2px solid rgb(88 100 255 / 30%);
-  border-radius: 50px;
-  font-size: 60px;
-  margin-bottom: 35px;
+  padding: 0;
+  border: none
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {

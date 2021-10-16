@@ -4,11 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using HomePetCare.App.Dominio;
 using HomePetCare.App.Persistencia;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace HomePetCare.App.Frontend.Pages
 {
+    [Authorize]
     public class MascotaModel : PageModel
     {
         private static IRepositorioMascota _repoMascota = new RepositorioMascota(new Persistencia.AppContext());

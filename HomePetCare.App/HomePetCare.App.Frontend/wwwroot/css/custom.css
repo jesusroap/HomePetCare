@@ -1,0 +1,23 @@
+.banner {
+    position: absolute;
+    background-image: url(../img/hero/hero-bg.svg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+main {
+    padding-top: 160px;
+}
+
+main h1 {
+    color: rgb(88 100 255 / 30%);
+    padding: 1rem 4rem;
+    border: 2px solid rgb(88 100 255 / 30%);
+    border-radius: 50px;
+    font-size: 60px;
+    margin-bottom: 35px;
+}

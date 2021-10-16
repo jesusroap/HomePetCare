@@ -4,42 +4,40 @@
     ViewData["Title"] = "Edición del Propietario";
 }
 
-<section id="edit" class="section">
-    <div class="container">
-        <h1 class="wow fadeInUp intern">@ViewData["Title"]: @Model.propietario.Nombre</h1>
+<section id="edit">
+    <h1 class="wow fadeInUp intern">@ViewData["Title"]: @Model.propietario.Nombre</h1>
+    
+    <form method="post" class="wow fadeInUp">
+        <input type="hidden" asp-for="propietario.Id"/>
+        <div class="form-group">
+            <label asp-for="propietario.Identificacion"></label>
+            <input asp-for="propietario.Identificacion" class="form-control">
+            <span class="text-danger" asp-validation-for="propietario.Identificacion"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="propietario.Nombre"></label>
+            <input asp-for="propietario.Nombre" class="form-control">
+            <span class="text-danger" asp-validation-for="propietario.Nombre"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="propietario.Apellido"></label>
+            <input asp-for="propietario.Apellido" class="form-control">
+            <span class="text-danger" asp-validation-for="propietario.Apellido"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="propietario.Direccion"></label>
+            <input asp-for="propietario.Direccion" class="form-control">
+            <span class="text-danger" asp-validation-for="propietario.Direccion"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="propietario.Telefono"></label>
+            <input asp-for="propietario.Telefono" class="form-control">
+            <span class="text-danger" asp-validation-for="propietario.Telefono"></span>
+        </div>
         
-        <form method="post" class="wow fadeInUp">
-            <input type="hidden" asp-for="propietario.Id"/>
-            <div class="form-group">
-                <label asp-for="propietario.Identificacion"></label>
-                <input asp-for="propietario.Identificacion" class="form-control">
-                <span class="text-danger" asp-validation-for="propietario.Identificacion"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="propietario.Nombre"></label>
-                <input asp-for="propietario.Nombre" class="form-control">
-                <span class="text-danger" asp-validation-for="propietario.Nombre"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="propietario.Apellido"></label>
-                <input asp-for="propietario.Apellido" class="form-control">
-                <span class="text-danger" asp-validation-for="propietario.Apellido"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="propietario.Direccion"></label>
-                <input asp-for="propietario.Direccion" class="form-control">
-                <span class="text-danger" asp-validation-for="propietario.Direccion"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="propietario.Telefono"></label>
-                <input asp-for="propietario.Telefono" class="form-control">
-                <span class="text-danger" asp-validation-for="propietario.Telefono"></span>
-            </div>
-            
-            <button type="submit" class="main-btn btn-hover border-btn intern">Grabar</button>
-            <a asp-page="./Propietario" class="main-btn btn-hover border-btn intern">Cancelar</a>
-        </form>
-    </div>
+        <button type="submit" class="main-btn btn-hover border-btn intern">Grabar</button>
+        <a asp-page="./Propietario" class="main-btn btn-hover border-btn intern">Cancelar</a>
+    </form>
 </section>
 
 <script>

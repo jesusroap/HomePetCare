@@ -4,62 +4,59 @@
     ViewData["Title"] = "Propietarios";
 }
 
-<section id="lista-propietarios" class="section">
-    <div class="container">
-        <h1 class="wow fadeInUp intern" data-wow-delay=".4s">@ViewData["Title"]</h1>
-        
-        <div class="wow fadeInUp" data-wow-delay=".5s" style="text-align: center;">
-            <form method="get" style="float: right">
-                <div class="form-group">
-                    Mascota: <input type="text" name="filtroBusqueda" asp-for="FiltroBusqueda" />
-                    <input type="submit" value="Filtrar" />
-                </div>
-            </form>
+<section id="lista-propietarios">
+    <h1 class="wow fadeInUp intern" data-wow-delay=".4s">@ViewData["Title"]</h1>
+    
+    <div class="wow fadeInUp" data-wow-delay=".5s" style="text-align: center;">
+        <form method="get" style="float: right">
+            <div class="form-group">
+                Mascota: <input type="text" name="filtroBusqueda" asp-for="FiltroBusqueda" />
+                <input type="submit" value="Filtrar" />
+            </div>
+        </form>
 
-            <table class="table">
-                <thead>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Identificación</th>
+                    <th>Nombre</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var propietario in Model.Propietarios)
+                {
                     <tr>
-                        <th>Id</th>
-                        <th>Identificación</th>
-                        <th>Nombre</th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
+                        <td>@propietario.Id</td>
+                        <td>@propietario.Identificacion</td>
+                        <td>@propietario.Nombre @propietario.Apellido</td>
+                        <td>
+                            <a class="btn btn-success table-btn" asp-page="./DetailsPropietario" asp-route-idPropietario="@propietario.Id">
+                                <i class="fas fa-info-circle"></i>
+                            </a>
+                        </td>
+                        <td>
+                            <a class="btn btn-warning table-btn" asp-page="./EditPropietario" asp-route-idPropietario="@propietario.Id">
+                                <i class="fas fa-user-edit" aria-hidden="true"></i>
+                            </a>
+                        </td>
+                        <td>
+                            <form method="get">
+                                <input type="hidden" asp-for="@propietario.Id" name="idPropietario"/>
+                                <button type="submit" class="btn btn-danger table-btn" onclick="confirm('¿Esta seguro de eliminar este paciente?');"><i class="fas fa-trash-alt" aria-hidden="true"></i></button>
+                            </form>
+                        </td>
                     </tr>
-                </thead>
+                }
+            </tbody>
+            
+        </table>
 
-                <tbody>
-                    @foreach (var propietario in Model.Propietarios)
-                    {
-                        <tr>
-                            <td>@propietario.Id</td>
-                            <td>@propietario.Identificacion</td>
-                            <td>@propietario.Nombre @propietario.Apellido</td>
-                            <td>
-                                <a class="btn btn-success table-btn" asp-page="./DetailsPropietario" asp-route-idPropietario="@propietario.Id">
-                                    <i class="fas fa-info-circle"></i>
-                                </a>
-                            </td>
-                            <td>
-                                <a class="btn btn-warning table-btn" asp-page="./EditPropietario" asp-route-idPropietario="@propietario.Id">
-                                    <i class="fas fa-user-edit" aria-hidden="true"></i>
-                                </a>
-                            </td>
-                            <td>
-                                <form method="get">
-                                    <input type="hidden" asp-for="@propietario.Id" name="idPropietario"/>
-                                    <button type="submit" class="btn btn-danger table-btn" onclick="confirm('¿Esta seguro de eliminar este paciente?');"><i class="fas fa-trash-alt" aria-hidden="true"></i></button>
-                                </form>
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-                
-            </table>
-
-            <a asp-page="./EditPropietario" class="main-btn btn-hover border-btn intern">Adicionar Propietario</a>
-        </div>
-        
+        <a asp-page="./EditPropietario" class="main-btn btn-hover border-btn intern">Adicionar Propietario</a>
     </div>
 </section>
 

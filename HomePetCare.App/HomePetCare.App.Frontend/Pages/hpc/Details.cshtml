@@ -4,35 +4,58 @@
     ViewData["Title"] = "Detalles de la Mascota";
 }
 
-<section id="details" class="section wow fadeInUp">
-    <div class="container">
-        <h1 class="intern">@Model.Mascota.Nombre</h1>
+<section id="details" class="wow fadeInUp">
+    <h1 class="intern">@Model.Mascota.Nombre</h1>
 
-        <div class="card" style="width: 50%; margin: auto;">
-            <img src="~/img/dogs/dog-1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">@Model.Mascota.Nombre</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item"><strong>Id:</strong> @Model.Mascota.Id</li>
-                <li class="list-group-item"><strong>Temperatura:</strong> @Model.Mascota.Temperatura</li>
-                <li class="list-group-item"><strong>Propietario:</strong>
-                    @try
-                    {
-                        @Model.Mascota.Propietario.Nombre <b></b> @Model.Mascota.Propietario.Apellido
-                    }
-                    catch (Exception)
-                    {
-                        <span>No asignado</span>
-                    }
-                </li>
-            </ul>
+    <div class="card" style="width: 50%; margin: auto;">
+        <img src="~/img/dogs/dog-1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h3 class="card-title">@Model.Mascota.Nombre</h3>
         </div>
-        <div style="text-align: center">
-            <a asp-page="./Mascota" class="main-btn btn-hover border-btn intern">Volver</a>
-        </div>
-        
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><p><strong>Id:</strong> @Model.Mascota.Id</p></li>
+            <li class="list-group-item"><p><strong>Propietario:</strong>
+                @try
+                {
+                    @Model.Mascota.Propietario.Nombre <b></b> @Model.Mascota.Propietario.Apellido
+                }
+                catch (Exception)
+                {
+                    <span>No asignado</span>
+                }
+                </p>
+            </li>
+            <li class="list-group-item"><p><strong>Veterinario:</strong>
+                @try
+                {
+                    @Model.Mascota.Veterinario.Nombre <b></b> @Model.Mascota.Veterinario.Apellido
+                }
+                catch (Exception)
+                {
+                    <span>No asignado</span>
+                }
+                </p>
+            </li>
+        </ul>
+    </div>
+    <br>
+    <div class="card" style="width: 50%; margin: auto;">
+        <ul class="list-group list-group-flush">  
+            <li class="list-group-item">
+                <h3>Signos Vitales</h3>
+            </li>
+            <li class="list-group-item">
+                <p><strong>Temperatura:</strong> @Model.Mascota.Temperatura</p>
+                <p><strong>Peso:</strong> @Model.Mascota.Peso</p>
+                <p><strong>Frecuencia Respiratoria:</strong> @Model.Mascota.FrecuenciaRespiratoria</p>
+                <p><strong>Frecuencia Cardiaca:</strong> @Model.Mascota.FrecuenciaCardiaca</p>
+                <p><strong>Estado de Animo:</strong> @Model.Mascota.EstadoAnimo</p>
+            </li>            
+            
+        </ul>
+    </div>
+    <div style="text-align: center">
+        <a asp-page="./Mascota" class="main-btn btn-hover border-btn intern">Volver</a>
     </div>
 </section>
 

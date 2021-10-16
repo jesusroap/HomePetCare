@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Http
+@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -10,13 +16,17 @@
       href="~/img/favicon.png"
     />
 
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> 
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
     <!-- ======== CSS here ======== -->
     <link rel="stylesheet" href="~/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/lineicons.css" />
     <link rel="stylesheet" href="~/css/animate.css" />
     <link rel="stylesheet" href="~/css/main.css" />
+    <link rel="stylesheet" href="~/css/custom.css" />
 </head>
 <body>
 
@@ -76,27 +86,42 @@
                   id="navbarSupportedContent"
                 >
                   <ul id="nav" class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                      <a id="home" asp-area="" asp-page="/Index">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a id="mascotas" asp-area="" asp-page="/hpc/Mascota">Mascotas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a id="veterinarios" asp-area="" asp-page="/hpc/Veterinario">Veterinarios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a id="propietarios" asp-area="" asp-page="/hpc/Propietario">Propietarios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a id="register" href="/Identity/Account/Register">Register</a>
-                    </li>
-                    <li class="nav-item">
-                        <a id="login" href="/Identity/Account/Login">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a id="logout" href="/Identity/Account/Logout">Logout</a>
-                    </li>                                        
+
+                    @if (SignInManager.IsSignedIn(User))
+                    {
+                      <li class="nav-item">
+                        <a id="home" asp-area="" asp-page="/Index">Home</a>
+                      </li>
+                      <li class="nav-item">
+                          <a id="mascotas" asp-area="" asp-page="/hpc/Mascota">Mascotas</a>
+                      </li>
+                      <li class="nav-item">
+                          <a id="veterinarios" asp-area="" asp-page="/hpc/Veterinario">Veterinarios</a>
+                      </li>
+                      <li class="nav-item">
+                          <a id="propietarios" asp-area="" asp-page="/hpc/Propietario">Propietarios</a>
+                      </li>
+                      <li class="nav-item">
+                          <a id="claims" asp-area="" asp-page="/hpc/claim">Claims</a>
+                      </li>
+                      <li class="nav-item">
+                          <a id="manage" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @UserManager.GetUserName(User)!</a>
+                      </li>
+                      <li class="nav-item">
+                          <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/Index", new { area = "" })">
+                              <button id="logout" type="submit" class="nav-link btn btn-link text-light"><i class="fas fa-sign-out-alt"></i></button>
+                          </form>
+                      </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item">
+                            <a id="register" asp-area="Identity" asp-page="/Account/Register">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="login" asp-area="Identity" asp-page="/Account/Login">Login</a>
+                        </li>
+                    }                                    
                     
                   </ul>
                 </div>
@@ -113,11 +138,11 @@
     </header>
     <!-- ======== header end ======== -->
 
-      @* <div class="container">
-          <main role="main" class="pb-3"> *@
+      <div class="container">
+          <main role="main" class="pb-3">
               @RenderBody()
-          @* </main>
-      </div> *@
+          </main>
+      </div>  
 
     <!-- ======== scroll-top ======== -->
     <a href="#" class="scroll-top btn-hover">
