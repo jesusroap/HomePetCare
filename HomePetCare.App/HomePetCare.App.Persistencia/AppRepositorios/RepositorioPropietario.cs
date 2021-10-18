@@ -31,7 +31,7 @@ namespace HomePetCare.App.Persistencia
 
         public void DeletePropietario(int idPropietario)
         {
-            var proietarioEncontrado = _appContext.Propietarios.FirstOrDefault(p => p.Id == idPropietario);
+            var proietarioEncontrado = _appContext.Propietarios.FirstOrDefault(p => p.PropietarioId == idPropietario);
 
             if (proietarioEncontrado == null)
                 return;
@@ -46,7 +46,7 @@ namespace HomePetCare.App.Persistencia
 
         public Propietario GetPropietario(int idPropietario)
         {
-            return _appContext.Propietarios.FirstOrDefault(p => p.Id == idPropietario);
+            return _appContext.Propietarios.FirstOrDefault(p => p.PropietarioId == idPropietario);
         }
 
         public IEnumerable<Propietario> GetPropietariosPorFiltro(string filtro = null)
@@ -68,7 +68,7 @@ namespace HomePetCare.App.Persistencia
 
         public Propietario UpdatePropietario(Propietario propietario)
         {
-            var propietarioEncontrado = _appContext.Propietarios.FirstOrDefault(p => p.Id == propietario.Id);
+            var propietarioEncontrado = _appContext.Propietarios.FirstOrDefault(p => p.PropietarioId == propietario.PropietarioId);
 
             if (propietarioEncontrado != null)
             {

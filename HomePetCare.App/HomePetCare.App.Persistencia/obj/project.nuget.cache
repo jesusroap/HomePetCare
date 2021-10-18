@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IoenDZGfO8dFlFsg/mctNmgztYAfoW+elBL6lNjJYVIp+nZxSH1REfrGohQf+fMLiyRfVgVgBbrYRG78DD8LXA==",
+  "dgSpecHash": "taGtd/KD4P8KOMuW64KYdEU4EfiWXN3iM2KxCAK+qTKKUx8oteGYQLhkRxLVBA9xHjOoRLKs3UWJPousgf7+tg==",
   "success": true,
-  "projectFilePath": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Persistencia/HomePetCare.App.Persistencia.csproj",
+  "projectFilePath": "/Users/mauricioroa/Desktop/HomePetCare_Local/HomePetCare.App/HomePetCare.App.Persistencia/HomePetCare.App.Persistencia.csproj",
   "expectedPackageFiles": [
     "/Users/mauricioroa/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/mauricioroa/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",

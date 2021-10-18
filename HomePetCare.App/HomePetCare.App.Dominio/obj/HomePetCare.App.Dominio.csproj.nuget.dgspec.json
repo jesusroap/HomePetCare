@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Dominio/HomePetCare.App.Dominio.csproj": {}
+    "/Users/mauricioroa/Desktop/HomePetCare_Local/HomePetCare.App/HomePetCare.App.Dominio/HomePetCare.App.Dominio.csproj": {}
   },
   "projects": {
-    "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Dominio/HomePetCare.App.Dominio.csproj": {
+    "/Users/mauricioroa/Desktop/HomePetCare_Local/HomePetCare.App/HomePetCare.App.Dominio/HomePetCare.App.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Dominio/HomePetCare.App.Dominio.csproj",
+        "projectUniqueName": "/Users/mauricioroa/Desktop/HomePetCare_Local/HomePetCare.App/HomePetCare.App.Dominio/HomePetCare.App.Dominio.csproj",
         "projectName": "HomePetCare.App.Dominio",
-        "projectPath": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Dominio/HomePetCare.App.Dominio.csproj",
+        "projectPath": "/Users/mauricioroa/Desktop/HomePetCare_Local/HomePetCare.App/HomePetCare.App.Dominio/HomePetCare.App.Dominio.csproj",
         "packagesPath": "/Users/mauricioroa/.nuget/packages/",
-        "outputPath": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Dominio/obj/",
+        "outputPath": "/Users/mauricioroa/Desktop/HomePetCare_Local/HomePetCare.App/HomePetCare.App.Dominio/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/mauricioroa/.nuget/NuGet/NuGet.Config"

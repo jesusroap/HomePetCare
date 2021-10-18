@@ -6,7 +6,7 @@ namespace HomePetCare.App.Dominio
     public class Propietario
     {
         // Atributos
-        public int Id {get; set;}
+        public int PropietarioId {get; set;}
 
         [Required(ErrorMessage = "El campo {0} es requerido"), StringLength(50)]
         public string Identificacion {get; set;}

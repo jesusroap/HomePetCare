@@ -18,9 +18,9 @@ namespace HomePetCare.App.Persistencia
                 // optionsBuilder.UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = HomePetCareData");
 
                 // Ejecutar en mac
-                var user = "";
+                var user = "SA";
                 var pass = "";
-                optionsBuilder.UseSqlServer("Server=localhost,1433\\MSSQLLocalDB;Initial Catalog=HomePetCareData;User=" + user + ";Password=" + pass);
+                optionsBuilder.UseSqlServer("Server=localhost,1433\\MSSQLLocalDB;Initial Catalog=HomePetCareData2;User=" + user + ";Password=" + pass);
             }
         } 
 

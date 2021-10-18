@@ -11,9 +11,8 @@ namespace HomePetCare.App.Persistencia
         private readonly AppContext _appContext;
 
         /// <summary>
-        
-        /// </summary>
         /// <param name="_appContext"></param>
+        /// </summary>
 
         public RepositorioMascota(AppContext appContext)
         {
@@ -39,13 +38,22 @@ namespace HomePetCare.App.Persistencia
 
         public IEnumerable<Mascota> GetAllMascotas()
         {
-            return _appContext.Mascotas.Include("Propietario");
+            return _appContext.Mascotas.Include("Propietario").Include("Veterinario");
         }
 
         public Mascota GetMascota(int idMascota)
         {
-            return _appContext.Mascotas.Include("Propietario").FirstOrDefault(p => p.Id == idMascota);
+            return _appContext.Mascotas.Include("Propietario").Include("Veterinario").FirstOrDefault(p => p.Id == idMascota);
         }
+
+        // IEnumerable<Propietario> IRepositorioMascota.GetPropietario(int idMascota)
+        // {
+        //     var mascota = _appContext.Mascotas.Where(p => p.Id == idMascota)
+        //                                             .Include(p => p.Propietario)
+        //                                             .FirstOrDefault();
+
+        //     return mascota.Propietario;
+        // }
 
         public Mascota UpdateMascota(Mascota mascota)
         {

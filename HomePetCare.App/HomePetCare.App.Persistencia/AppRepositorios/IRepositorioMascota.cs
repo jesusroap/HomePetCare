@@ -11,5 +11,7 @@ namespace HomePetCare.App.Persistencia
         Mascota UpdateMascota(Mascota mascota);
         void DeleteMascota(int idMascota);
         Mascota GetMascota(int idMascota);
+
+        // IEnumerable<Propietario> GetPropietario(int idMascota);
     }
 }

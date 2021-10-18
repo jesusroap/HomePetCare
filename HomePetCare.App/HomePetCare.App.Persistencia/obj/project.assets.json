@@ -7271,11 +7271,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Persistencia/HomePetCare.App.Persistencia.csproj",
+      "projectUniqueName": "/Users/mauricioroa/Desktop/HomePetCare_Local/HomePetCare.App/HomePetCare.App.Persistencia/HomePetCare.App.Persistencia.csproj",
       "projectName": "HomePetCare.App.Persistencia",
-      "projectPath": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Persistencia/HomePetCare.App.Persistencia.csproj",
+      "projectPath": "/Users/mauricioroa/Desktop/HomePetCare_Local/HomePetCare.App/HomePetCare.App.Persistencia/HomePetCare.App.Persistencia.csproj",
       "packagesPath": "/Users/mauricioroa/.nuget/packages/",
-      "outputPath": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Persistencia/obj/",
+      "outputPath": "/Users/mauricioroa/Desktop/HomePetCare_Local/HomePetCare.App/HomePetCare.App.Persistencia/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/mauricioroa/.nuget/NuGet/NuGet.Config"
@@ -7290,8 +7290,8 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "projectReferences": {
-            "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Dominio/HomePetCare.App.Dominio.csproj": {
-              "projectPath": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Dominio/HomePetCare.App.Dominio.csproj"
+            "/Users/mauricioroa/Desktop/HomePetCare_Local/HomePetCare.App/HomePetCare.App.Dominio/HomePetCare.App.Dominio.csproj": {
+              "projectPath": "/Users/mauricioroa/Desktop/HomePetCare_Local/HomePetCare.App/HomePetCare.App.Dominio/HomePetCare.App.Dominio.csproj"
             }
           }
         }
