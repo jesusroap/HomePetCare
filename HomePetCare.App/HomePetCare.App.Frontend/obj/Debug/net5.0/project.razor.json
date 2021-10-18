@@ -15619,6 +15619,11 @@
   "RootNamespace": "HomePetCare.App.Frontend",
   "Documents": [
     {
+      "FilePath": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Frontend/Pages/Veterinarios/List.cshtml",
+      "TargetPath": "Pages\\Veterinarios\\List.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Frontend/Pages/Shared/_Layout.cshtml",
       "TargetPath": "Pages\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
@@ -15629,13 +15634,18 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Frontend/Pages/hpc/Mascota.cshtml",
-      "TargetPath": "Pages\\hpc\\Mascota.cshtml",
+      "FilePath": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Frontend/Pages/Propietarios/Edit.cshtml",
+      "TargetPath": "Pages\\Propietarios\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Frontend/Pages/hpc/DetailsPropietario.cshtml",
-      "TargetPath": "Pages\\hpc\\DetailsPropietario.cshtml",
+      "FilePath": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Frontend/Pages/Claim.cshtml",
+      "TargetPath": "Pages\\Claim.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Frontend/Pages/Mascotas/List.cshtml",
+      "TargetPath": "Pages\\Mascotas\\List.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15649,23 +15659,23 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Frontend/Pages/assign/Owner.cshtml",
-      "TargetPath": "Pages\\assign\\Owner.cshtml",
+      "FilePath": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Frontend/Pages/Mascotas/Edit.cshtml",
+      "TargetPath": "Pages\\Mascotas\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Frontend/Pages/hpc/Details.cshtml",
-      "TargetPath": "Pages\\hpc\\Details.cshtml",
+      "FilePath": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Frontend/Pages/Veterinarios/Edit.cshtml",
+      "TargetPath": "Pages\\Veterinarios\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Frontend/Pages/hpc/Propietario.cshtml",
-      "TargetPath": "Pages\\hpc\\Propietario.cshtml",
+      "FilePath": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Frontend/Pages/Assigns/Assign.cshtml",
+      "TargetPath": "Pages\\Assigns\\Assign.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Frontend/Pages/hpc/Veterinario.cshtml",
-      "TargetPath": "Pages\\hpc\\Veterinario.cshtml",
+      "FilePath": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Frontend/Pages/Propietarios/Details.cshtml",
+      "TargetPath": "Pages\\Propietarios\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15679,13 +15689,18 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Frontend/Pages/assign/Vet.cshtml",
-      "TargetPath": "Pages\\assign\\Vet.cshtml",
+      "FilePath": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Frontend/Areas/Identity/Pages/Account/Register.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Frontend/Areas/Identity/Pages/Account/Register.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
+      "FilePath": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Frontend/Pages/Assigns/Vet.cshtml",
+      "TargetPath": "Pages\\Assigns\\Vet.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Frontend/Pages/Veterinarios/Details.cshtml",
+      "TargetPath": "Pages\\Veterinarios\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15694,23 +15709,18 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Frontend/Pages/hpc/Edit.cshtml",
-      "TargetPath": "Pages\\hpc\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Frontend/Pages/_ViewStart.cshtml",
       "TargetPath": "Pages\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Frontend/Pages/hpc/claim.cshtml",
-      "TargetPath": "Pages\\hpc\\claim.cshtml",
+      "FilePath": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Frontend/Pages/Mascotas/Details.cshtml",
+      "TargetPath": "Pages\\Mascotas\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Frontend/Pages/hpc/EditPropietario.cshtml",
-      "TargetPath": "Pages\\hpc\\EditPropietario.cshtml",
+      "FilePath": "/Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Frontend/Pages/Propietarios/List.cshtml",
+      "TargetPath": "Pages\\Propietarios\\List.cshtml",
       "FileKind": "mvc"
     },
     {

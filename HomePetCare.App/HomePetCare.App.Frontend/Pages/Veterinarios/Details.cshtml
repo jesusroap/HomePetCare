@@ -1,0 +1,29 @@
+﻿@page
+@model HomePetCare.App.Frontend.Pages.Veterinarios.DetailsModel
+@{
+    ViewData["Title"] = "Detalles del Veterinario";
+}
+
+<section id="details" class="wow fadeInUp">
+    <h1 class="intern">@Model.Veterinario.Nombre</h1>
+
+    <div class="card" style="width: 50%; margin: auto;">
+        <img src="~/img/owners/owner-1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">@Model.Veterinario.Nombre @Model.Veterinario.Apellido</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><strong>Id:</strong> @Model.Veterinario.VeterinarioId</li>
+            <li class="list-group-item"><strong>Teléfono:</strong> @Model.Veterinario.Telefono</li>
+            <li class="list-group-item"><strong>Tarjeta Profesional:</strong> @Model.Veterinario.TarjetaProfesional</li>
+        </ul>
+    </div>
+    <div style="text-align: center">
+        <a asp-page="./List" class="main-btn btn-hover border-btn intern">Volver</a>
+    </div>
+</section>
+
+<script>
+    document.querySelector("#propietarios").classList.add("active");
+</script>

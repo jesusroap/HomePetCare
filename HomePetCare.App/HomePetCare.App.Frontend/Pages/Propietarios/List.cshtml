@@ -1,0 +1,65 @@
+﻿@page
+@model HomePetCare.App.Frontend.Pages.Propietarios.ListModel
+@{
+    ViewData["Title"] = "Propietarios";
+}
+
+<section id="lista-propietarios">
+    <h1 class="wow fadeInUp intern" data-wow-delay=".4s">@ViewData["Title"]</h1>
+    
+    <div class="wow fadeInUp" data-wow-delay=".5s" style="text-align: center;">
+        <form method="get" style="float: right">
+            <div class="form-group">
+                Mascota: <input type="text" name="filtroBusqueda" asp-for="FiltroBusqueda" />
+                <input type="submit" value="Filtrar" />
+            </div>
+        </form>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Identificación</th>
+                    <th>Nombre</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var propietario in Model.Propietarios)
+                {
+                    <tr>
+                        <td>@propietario.PropietarioId</td>
+                        <td>@propietario.Identificacion</td>
+                        <td>@propietario.Nombre @propietario.Apellido</td>
+                        <td>
+                            <a class="btn btn-success table-btn" asp-page="./Details" asp-route-idPropietario="@propietario.PropietarioId" title="Info">
+                                <i class="lni lni-postcard"></i>
+                            </a>
+                        </td>
+                        <td>
+                            <a class="btn btn-warning table-btn" asp-page="./Edit" asp-route-idPropietario="@propietario.PropietarioId" title="Edit">
+                                <i class="lni lni-pencil-alt"></i>
+                            </a>
+                        </td>
+                        <td>
+                            <form method="get">
+                                <input type="hidden" asp-for="@propietario.PropietarioId" name="idPropietario"/>
+                                <button type="submit" class="btn btn-danger table-btn" title="Delete"><i class="lni lni-trash-can"></i></button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            
+        </table>
+
+        <a asp-page="./Edit" class="main-btn btn-hover border-btn intern">Adicionar Propietario</a>
+    </div>
+</section>
+
+<script>
+    document.querySelector("#propietarios").classList.add("active");
+</script>

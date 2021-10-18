@@ -16,7 +16,7 @@
       href="~/img/favicon.png"
     />
 
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- ======== Open Sans - Google Fonts ======== -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
@@ -29,14 +29,6 @@
     <link rel="stylesheet" href="~/css/custom.css" />
 </head>
 <body>
-
-    <!--[if lte IE 9]>
-      <p class="browserupgrade">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
-        your experience and security.
-      </p>
-    <![endif]-->
 
     <!-- ======== preloader start ======== -->
     <div class="preloader">
@@ -93,23 +85,23 @@
                         <a id="home" asp-area="" asp-page="/Index">Home</a>
                       </li>
                       <li class="nav-item">
-                          <a id="mascotas" asp-area="" asp-page="/hpc/Mascota">Mascotas</a>
+                          <a id="mascotas" asp-area="" asp-page="/Mascotas/List">Mascotas</a>
                       </li>
                       <li class="nav-item">
-                          <a id="veterinarios" asp-area="" asp-page="/hpc/Veterinario">Veterinarios</a>
+                          <a id="veterinarios" asp-area="" asp-page="/Veterinarios/List">Veterinarios</a>
                       </li>
                       <li class="nav-item">
-                          <a id="propietarios" asp-area="" asp-page="/hpc/Propietario">Propietarios</a>
+                          <a id="propietarios" asp-area="" asp-page="/Propietarios/List">Propietarios</a>
                       </li>
                       <li class="nav-item">
-                          <a id="claims" asp-area="" asp-page="/hpc/claim">Claims</a>
+                          <a id="claims" asp-area="" asp-page="/Claim">Claims</a>
                       </li>
                       <li class="nav-item">
                           <a id="manage" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @UserManager.GetUserName(User)!</a>
                       </li>
                       <li class="nav-item">
                           <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/Index", new { area = "" })">
-                              <button id="logout" type="submit" class="nav-link btn btn-link text-light"><i class="fas fa-sign-out-alt"></i></button>
+                              <button id="logout" type="submit" class="nav-link btn btn-link text-light" title="Logout"><i class="lni lni-exit"></i></button>
                           </form>
                       </li>
                     }
@@ -138,11 +130,13 @@
     </header>
     <!-- ======== header end ======== -->
 
-      <div class="container">
-          <main role="main" class="pb-3">
-              @RenderBody()
-          </main>
-      </div>  
+    <!-- ======== body start ======== -->
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <!-- ======== body end ======== -->
 
     <!-- ======== scroll-top ======== -->
     <a href="#" class="scroll-top btn-hover">
@@ -222,12 +216,11 @@
     </footer>
     <!-- ======== footer end ======== -->
 
-        <!-- ======== JS here ======== -->
-    <script src="~/js/wow.min.js"></script>
-    <script src="~/js/main.js"></script>
-
+    <!-- ======== JS here ======== -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/wow.min.js"></script>
+    <script src="~/js/main.js"></script>
 
     @RenderSection("Scripts", required: false)
 </body>

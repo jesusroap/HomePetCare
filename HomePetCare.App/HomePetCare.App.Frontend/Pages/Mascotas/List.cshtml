@@ -1,0 +1,101 @@
+﻿@page
+@model HomePetCare.App.Frontend.Pages.Mascotas.ListModel
+@{
+    ViewData["Title"] = "Mascotas";
+}
+
+<section id="lista-mascotas">
+    <h1 class="wow fadeInUp intern" data-wow-delay=".4s">@ViewData["Title"]</h1>
+    
+    <div class="wow fadeInUp" data-wow-delay=".5s" style="text-align: center;">
+        <form method="get" style="float: right">
+            <div class="form-group">
+                Mascota: <input type="text" name="filtroBusqueda" asp-for="FiltroBusqueda" />
+                <input type="submit" value="Filtrar" />
+            </div>
+        </form>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Propietario</th>
+                    <th>Veterinario</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var mascota in Model.Mascotas)
+                {
+                    <tr>
+                        <td>@mascota.Id</td>
+                        <td>@mascota.Nombre</td>
+                        <td>
+                            @try
+                            {
+                                @mascota.Propietario.Nombre <b></b> @mascota.Propietario.Apellido;
+                                <a asp-page="/Assigns/Assign" asp-route-idMascota="@mascota.Id" style="float: right" title="Edit Owner"><i class="lni lni-pencil-alt"></i></a>
+                            }
+                            catch (Exception)
+                            {
+                                <a asp-page="/Assigns/Assign" asp-route-idMascota="@mascota.Id" title="Assign Owner"><i class="lni lni-circle-plus"></i></a>
+                            }
+                        </td>
+                        <td>
+                            @try
+                            {
+                                @mascota.Veterinario.Nombre <b></b> @mascota.Veterinario.Apellido;
+                                <a asp-page="/Assigns/Assign" asp-route-idMascota="@mascota.Id" style="float: right" title="Edit Vet"><i class="lni lni-pencil-alt"></i></a>
+                            }
+                            catch (Exception)
+                            {
+                                <a asp-page="/Assigns/Assign" asp-route-idMascota="@mascota.Id"><i class="lni lni-circle-plus" title="Assign Vet"></i></a>
+                            }
+                        </td>
+                        <td>
+                            <a class="btn btn-success table-btn" asp-page="./Details" asp-route-idMascota="@mascota.Id" title="Info">
+                                <i class="lni lni-postcard"></i>
+                            </a>
+                        </td>
+                        <td>
+                            <a class="btn btn-warning table-btn" asp-page="./Edit"  asp-route-idMascota="@mascota.Id" title="Edit">
+                                <i class="lni lni-pencil-alt"></i>
+                            </a>
+                        </td>
+                        <td>
+                            <form method="get">
+                                <input type="hidden" asp-for="@mascota.Id" name="idMascota"/>
+                                <button type="submit" class="btn btn-danger table-btn" title="Delete"><i class="lni lni-trash-can"></i></button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            
+        </table>
+
+        <a asp-page="./Edit" class="main-btn btn-hover border-btn intern">Adicionar Mascota</a>
+
+        @* <script type="text/javascript">
+            function Confirmacion() {
+                var seleccion = confirm("¿Esta seguro de eliminar esta mascota?");   
+
+                if (seleccion) {         
+                    
+                }         
+                else {
+
+                }
+            }
+        </script> *@
+
+    </div>
+</section>
+
+<script>
+    document.querySelector("#mascotas").classList.add("active");
+</script>

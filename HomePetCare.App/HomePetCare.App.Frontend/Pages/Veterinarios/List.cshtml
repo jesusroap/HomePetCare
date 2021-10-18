@@ -1,0 +1,65 @@
+﻿@page
+@model HomePetCare.App.Frontend.Pages.Veterinarios.ListModel
+@{
+    ViewData["Title"] = "Veterinarios";
+}
+
+<section id="lista-veterinarios">
+    <h1 class="wow fadeInUp intern" data-wow-delay=".4s">@ViewData["Title"]</h1>
+    
+    <div class="wow fadeInUp" data-wow-delay=".5s" style="text-align: center;">
+        <form method="get" style="float: right">
+            <div class="form-group">
+                Mascota: <input type="text" name="filtroBusqueda" asp-for="FiltroBusqueda" />
+                <input type="submit" value="Filtrar" />
+            </div>
+        </form>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Tarjeta Profesional</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var veterinario in Model.Veterinarios)
+                {
+                    <tr>
+                        <td>@veterinario.VeterinarioId</td>
+                        <td>@veterinario.Nombre @veterinario.Apellido</td>
+                        <td>@veterinario.TarjetaProfesional</td>
+                        <td>
+                            <a class="btn btn-success table-btn" asp-page="./Details" asp-route-idVeterinario="@veterinario.VeterinarioId">
+                                <i class="lni lni-postcard"></i>
+                            </a>
+                        </td>
+                        <td>
+                            <a class="btn btn-warning table-btn" asp-page="./Edit" asp-route-idVeterinario="@veterinario.VeterinarioId">
+                                <i class="lni lni-pencil-alt"></i>
+                            </a>
+                        </td>
+                        <td>
+                            <form method="get">
+                                <input type="hidden" asp-for="@veterinario.VeterinarioId" name="idVeterinario"/>
+                                <button type="submit" class="btn btn-danger table-btn"><i class="lni lni-trash-can"></i></button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            
+        </table>
+
+        <a asp-page="./Edit" class="main-btn btn-hover border-btn intern">Adicionar Veterinario</a>
+    </div>
+</section>
+
+<script>
+    document.querySelector("#veterinarios").classList.add("active");
+</script>

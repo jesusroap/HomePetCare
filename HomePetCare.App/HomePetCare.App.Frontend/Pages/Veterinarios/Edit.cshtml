@@ -1,0 +1,40 @@
+﻿@page
+@model HomePetCare.App.Frontend.Pages.Veterinarios.EditModel
+@{
+    ViewData["Title"] = "Edición del Veterinario";
+}
+
+<section id="edit">
+    <h1 class="wow fadeInUp intern">@ViewData["Title"]: @Model.veterinario.Nombre</h1>
+    
+    <form method="post" class="wow fadeInUp">
+        <input type="hidden" asp-for="veterinario.VeterinarioId"/>
+        <div class="form-group">
+            <label asp-for="veterinario.Nombre"></label>
+            <input asp-for="veterinario.Nombre" class="form-control">
+            <span class="text-danger" asp-validation-for="veterinario.Nombre"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="veterinario.Apellido"></label>
+            <input asp-for="veterinario.Apellido" class="form-control">
+            <span class="text-danger" asp-validation-for="veterinario.Apellido"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="veterinario.Telefono"></label>
+            <input asp-for="veterinario.Telefono" class="form-control">
+            <span class="text-danger" asp-validation-for="veterinario.Telefono"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="veterinario.TarjetaProfesional"></label>
+            <input asp-for="veterinario.TarjetaProfesional" class="form-control">
+            <span class="text-danger" asp-validation-for="veterinario.TarjetaProfesional"></span>
+        </div>
+        
+        <button type="submit" class="main-btn btn-hover border-btn intern">Grabar</button>
+        <a asp-page="./List" class="main-btn btn-hover border-btn intern">Cancelar</a>
+    </form>
+</section>
+
+<script>
+    document.querySelector("#veterinarios").classList.add("active");
+</script>

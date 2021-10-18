@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = HomePetCare.App.Frontend
-build_property.ProjectDir = /Users/mauricioroa/Desktop/HomePetCare/HomePetCare.App/HomePetCare.App.Frontend/
+build_property.ProjectDir = /Users/mauricioroa/Desktop/HomePetCare_Local/HomePetCare.App/HomePetCare.App.Frontend/
